@@ -13,11 +13,6 @@ build:
 
 mkdocs:
   configuration: mkdocs.yml
-  site_name: ICDS User Guide
-  site_url: https://icds-docs.readthedocs.io/en/latest/
-  repo_url: https://github.com/CarrieBrown/icds_docs/
-  theme:
-    name: readthedocs
 
 # Optionally declare the Python requirements required to build your docs
 python:
