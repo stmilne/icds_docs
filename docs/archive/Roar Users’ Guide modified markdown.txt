@@ -14,7 +14,7 @@ All Roar users- students, faculty, and staff- are invited to take a brief, five 
 
 ### 1 Introduction
 
-Computational and data sciences are a fast growing mode of discovery, in addition to traditional theory and experiment, because they provides a unique virtual laboratory to investigate complex problems that are otherwise impossible or impractical to address. Such problems can range from understanding the physics of the origins of the universe, the genomic/molecular basis of disease, or the socioeconomic impacts of a digital society; to designing smart structures and nanoscale tailored materials; or to developing systems for clean energy or realtime responses to threats. The intellectual strength of computational science lies with its universality - all research domains benefit from it. The expectation is that The Institute for Computational and Data Sciences will succeed both in facilitating research across a broad spectrum of disciplines and in securing significant external resources for cyberscience-related research for years to come.  
+Computational and data sciences are a fast growing mode of discovery, in addition to traditional theory and experiment, because they provides a unique virtual laboratory to investigate complex problems that are otherwise impossible or impractical to address. Such problems can range from understanding the physics of the origins of the universe, the genomic/molecular basis of disease, or the socioeconomic impacts of a digital society; to designing smart structures and nanoscale tailored materials; or to developing systems for clean energy or realtime responses to threats. The intellectual strength of computational science lies with its universality – all research domains benefit from it. The expectation is that The Institute for Computational and Data Sciences will succeed both in facilitating research across a broad spectrum of disciplines and in securing significant external resources for cyberscience-related research for years to come.  
 
 <a name="01-01-icds-aci"></a>  
 
@@ -155,7 +155,7 @@ on ACI-i. Note that the resident memory constraint still allows for memory that 
 
 #### 3.3 Roar Open Queue
 
-All Penn State students, faculty and staff are able to run on the Roar "open queue" on ACI-b for no charge. The current limits per user on the open queue are:
+All Penn State students, faculty and staff are able to run on the Roar “open queue” on ACI-b for no charge. The current limits per user on the open queue are:
 
 *   <span class="normaltextrun"><span lang="">100 jobs pending</span></span>
 *   <span class="normaltextrun"><span lang="">100 cores executing jobs at any given time</span></span>
@@ -290,7 +290,7 @@ insensitive, and asterisks ('*') will indicate wildcard characters.|
 |grep|Used for searching within files.|
 |awk|A programming language typically used for data extraction.|
 |id|Show all of the groups a user is in.|
-|du|Show the disk usage. Typically used with -h (for human readable) and -max-depth=1 to limit to only the directories in that level rather than all files.|
+|du|Show the disk usage. Typically used with -h (for human readable) and –max-depth=1 to limit to only the directories in that level rather than all files.|
 |env|Print out all of the current environment variables.|
 |less|View a file.|
 |cp|Copy a file. Note the -r (recursive) flag can be used to copy directories.|
@@ -505,7 +505,7 @@ Users can connect to ACI-b with the hostname
 
 <pre>submit.aci.ics.psu.edu</pre>
 
-using `ssh`. Users  connecting with ssh are encouraged to use the secure x-window forwarding flag (`-Y`) if x-windows will be used during the session. Note that the screen may not show * symbols for each keystroke when your password is being entered. (In this example, the username is "abc123".)
+using `ssh`. Users  connecting with ssh are encouraged to use the secure x-window forwarding flag (`-Y`) if x-windows will be used during the session. Note that the screen may not show * symbols for each keystroke when your password is being entered. (In this example, the username is “abc123”.)
 
 <pre>ssh -Y abc123@submit.aci.ics.psu.edu</pre>
 
@@ -540,7 +540,7 @@ Users can connect to HPRC from ACI-b head nodes, with the host name
 
 <pre>submit.aci.ics.psu.edu</pre>
 
-…using ssh. Users connecting with ssh are encouraged to use the secure x-window forwarding flag (-Y) if x-windows will be used during the session. Note that the screen may not show * symbols for each keystroke when your password is being entered. (In this example, the username is "abc123".)
+…using ssh. Users connecting with ssh are encouraged to use the secure x-window forwarding flag (-Y) if x-windows will be used during the session. Note that the screen may not show * symbols for each keystroke when your password is being entered. (In this example, the username is “abc123”.)
 
 <pre>ssh -Y abc123@submit.aci.ics.psu.edu</pre>
 
@@ -694,15 +694,15 @@ If you are transferring files that have not been compressed yet, like text files
 
 <pre>rsync -az source_dir username@remote_host:target_dir</pre>
 
-The -P flag is very helpful. It combines the flags -progress and -partial. The former gives you a progress bar for the transfers and the latter allows you to resume interrupted transfers:
+The -P flag is very helpful. It combines the flags –progress and –partial. The former gives you a progress bar for the transfers and the latter allows you to resume interrupted transfers:
 
 <pre>rsync -azP source_dir username@remote_host:target_dir</pre>
 
-In order to keep two directories synchronized it is necessary to delete files from the destination directory if they are removed from the source. rsync does not delete anything from the destination directory by default. To change this behavior use the `-delete` option:
+In order to keep two directories synchronized it is necessary to delete files from the destination directory if they are removed from the source. rsync does not delete anything from the destination directory by default. To change this behavior use the `–delete` option:
 
 <pre>rsync -a --delete source_dir username@remote_host:taget_dir</pre>
 
-If you wish to exclude certain files or directories located inside a directory you are syncing, you can do so by specifying them in a comma-separated list following `-exclude=` option:
+If you wish to exclude certain files or directories located inside a directory you are syncing, you can do so by specifying them in a comma-separated list following `–exclude=` option:
 
 <pre>rsync -a --exclude=pattern_to_exclude source_dir username@remote_host:target_dir
 
@@ -758,9 +758,9 @@ Users may also want to change the group of their files using the `chgrp` command
 
 Version control is a way to track multiple versions of a code. This has a place in development, primarily with adding new features while still using the original code or with multiple developers, and if the code has minor variants for reasons such as slightly different input/output data types or for use on different compute resources. One popular version control tool is `git`, which uses a distributed approach which allows for many development points. The basic `git` workflow is to
 
-*   Modify files - create new code, fix bugs, etc.
-*   Stage the files - explicitly state what will be deposited
-*   Commit your files - store a snapshot
+*   Modify files – create new code, fix bugs, etc.
+*   Stage the files – explicitly state what will be deposited
+*   Commit your files – store a snapshot
 
 Your repository will have a master branch, where the current production code usually exists, and other branches that may be for any other purpose, such as development or variations. Branches can either be merged back to the master branch as features are added and execution is validated, or kept separate if the usage requires multiple working versions of the code. It is up to the user to define how their repository is set-up as well as to keep non-local versions of the repository as up-to-date as desired. There are great online resources for `git` including [excellent documentation](http://git-scm.com/doc) and [tutorials](http://try.github.io).
 
@@ -788,9 +788,9 @@ It’s possible to link to pre-compiled libraries that are created by you or tha
 
 Complicated compilations can also be done using a build automation software package such as `make`, which is available without a module, or `cmake`, which is available as a module. The general build automation process involves using a Makefile that has:
 
-*   Outputs - the executable/library being created
-*   Dependencies - what each output relies on
-*   Instructions - how to make/find each dependency
+*   Outputs – the executable/library being created
+*   Dependencies – what each output relies on
+*   Instructions – how to make/find each dependency
 
 and can set environment variables. The nomenclature for repeated sections can use regex and so can be very complicated. Information about these tools can be found in online references, such as the [make](http://gnu.org/software/make/manual/make.html) and [cmake](https://cmake.org/documentation/) manuals. Some common pitfalls that the iAsk center sees for using make are:
 
@@ -1015,7 +1015,7 @@ Users submitting to an allocation can run in ‘burst’ mode. Your group may us
 
 How much you can use Roar is governed by the size of your allocation and how much you have used the system in the past 90 days. In any given 90-day period, you may use up to your Core Limit times the number of hours in 90 days (2160). The amount of core-hours you have available is governed by a 90-day sliding window, such that the core-hours you use in any given day become available again after 90 days.  
 
-**How is My Allocation "Charged" for a Batch Job?**
+**How is My Allocation “Charged” for a Batch Job?**
 
 The charge associated with a job is dependent on the total number of requested cores and the actual runtime of the job (in seconds):
 
@@ -1102,8 +1102,8 @@ The ACI-b GPU nodes are comprised of dual NVIDIA Tesla K80 GPU cards. Each card 
 
 ##### <span class="titlemark">7.5.1</span> Accessing GPU Resources
 
-To access a GPU on ACI-b, you must be a member of a GReAT GPU allocation. To request a node with a GPU, add _"gpus=N"_ to your resource list in either your job script or a submission argument. For example, `#PBS -l nodes=1:ppn=1:gpus=1` or `qsub -l nodes=1:ppn=1:gpus=1 ...`  
-The requested GPU is placed in exclusive process mode by default. This means that only a single process can access the GPU, but it can spawn multiple different threads. To allow multiple processes on a single GPU, the "shared" feature can be appended to the resource list. A general GPU request then takes the form of:  
+To access a GPU on ACI-b, you must be a member of a GReAT GPU allocation. To request a node with a GPU, add _“gpus=N”_ to your resource list in either your job script or a submission argument. For example, `#PBS -l nodes=1:ppn=1:gpus=1` or `qsub -l nodes=1:ppn=1:gpus=1 ...`  
+The requested GPU is placed in exclusive process mode by default. This means that only a single process can access the GPU, but it can spawn multiple different threads. To allow multiple processes on a single GPU, the “shared” feature can be appended to the resource list. A general GPU request then takes the form of:  
 `#PBS -l nodes=NN:ppn=NC:gpus=NG:feature`  
 or  
 `qsub -l nodes=NN:ppn=NC:gpus=NG:feature`  
@@ -1180,7 +1180,7 @@ $ export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
 `  
 **CUDA example**  
 The CUDA Toolkit includes many CUDA code examples that can help get you started with writing your own CUDA-enabled software. These examples can be found at /usr/local/cuda/samples/ for the latest available version of CUDA. You may also find [additional CUDA code samples](https://developer.nvidia.com/cuda-code-samples "CUDA code samples") on the NVIDIA website.  
-Here, we will compare the performance of the CPU and GPU for the "nbody" example.
+Here, we will compare the performance of the CPU and GPU for the “nbody” example.
 
 1.  Start an interactive session on a GPU node  
     `$ qsub -I -A gpu_allocation_name -l nodes=1:ppn=1:gpus=1 -l pmem=10gb -l walltime=1:00:00`
@@ -1222,7 +1222,7 @@ Some software packages available on the Roar software stack have native GPU supp
 |Ansys: polyflow|polyflow -acc nvidia -na N ...|
 |Ansys: other|The -batchoptions command flag can be used to enable GPU support. See the software specific manual available through the GUI for the options available for each Ansys product.  
 
-ex. ansysedt -batchoptions "HFSS/EnableGPU=1" ...|
+ex. ansysedt -batchoptions “HFSS/EnableGPU=1” ...|
 |Abaqus|abaqus gpus=N ... OR abaqus -gpus N ...|
 
 
@@ -1358,7 +1358,7 @@ Some jobs may be best served by custom bash environments, especially those run w
 
 Here’s an example on the command line:
 
-`qsub -I -v SINGULARITY_CONTAINER="/storage/work/abc123/singularity/bionic-base.simg" -v BASH_ENV="/storage/abc123/.bashrc_ubuntu" -q hprc -A epo2-hprc -l nodes=1:ppn=20 -l pmem=5gb -l walltime=16:30:00`
+`qsub -I -v SINGULARITY_CONTAINER="/storage/work/abc123/singularity/bionic-base.simg" -v BASH_ENV=”/storage/abc123/.bashrc_ubuntu” -q hprc -A epo2-hprc -l nodes=1:ppn=20 -l pmem=5gb -l walltime=16:30:00`
 
 Here’s an example within the submission script:
 
@@ -1372,7 +1372,7 @@ Here’s an example within the submission script:
 #PBS -q hprc  
 #PBS -A ics-hprc  
 #PBS -v SINGULARITY_CONTAINER="/storage/work/abc123/singularity/bionic-base.simg"  
-#PBS -v BASH_ENV="/storage/abc123/.bashrc_ubuntu"`
+#PBS -v BASH_ENV=”/storage/abc123/.bashrc_ubuntu”`
 
 <a name="09-00-software-stack"></a>  
 
@@ -1770,7 +1770,7 @@ Stata is a powerful statistical package with smart data-management facilities, a
 *   Stata/IC which is the standard version
 *   Small Stata which is a smaller, student version of educational purchase only.
 
-For parallel processing in Stata you must use stata-mp at the bottom of your PBS script. You must also indicate the number of processors (up to 16) in the PBS script as well as your do file. As a line in your do file be sure to include "set processors n", where n = the number of processors and should be the same as the number in your PBS script. An example PBS script is below where the number of processors is set to 8.  
+For parallel processing in Stata you must use stata-mp at the bottom of your PBS script. You must also indicate the number of processors (up to 16) in the PBS script as well as your do file. As a line in your do file be sure to include ”set processors n”, where n = the number of processors and should be the same as the number in your PBS script. An example PBS script is below where the number of processors is set to 8.  
 
 <span class="cmbx-10">Setup:</span>  
 
@@ -2249,7 +2249,7 @@ Some containers may have one or more runscripts, which allow a user to define a 
 Hello there cjb47, from ICDS
 </pre>
 
-A container may have multiple runscripts; in Singularity terminology, this is known as an "application." Here is an example, including instructions for interacting with applications:
+A container may have multiple runscripts; in Singularity terminology, this is known as an “application.” Here is an example, including instructions for interacting with applications:
 
 <pre class="script">[cjb47@comp-sc-0120 images]$ singularity apps ./multiapps-aci.simg
 cowsay
