@@ -1,20 +1,18 @@
+---
+title: Introduction
+---
+
 ### 1 Introduction
 
 Computational and data sciences are a fast growing mode of discovery, in addition to traditional theory and experiment, because they provides a unique virtual laboratory to investigate complex problems that are otherwise impossible or impractical to address. Such problems can range from understanding the physics of the origins of the universe, the genomic/molecular basis of disease, or the socioeconomic impacts of a digital society; to designing smart structures and nanoscale tailored materials; or to developing systems for clean energy or realtime responses to threats. The intellectual strength of computational science lies with its universality – all research domains benefit from it. The expectation is that The Institute for Computational and Data Sciences will succeed both in facilitating research across a broad spectrum of disciplines and in securing significant external resources for cyberscience-related research for years to come.  
-
-<a name="01-01-icds-aci"></a>  
 
 #### 1.1 What is Roar?
 
 The Roar supercomputer (formerly known as the Institute for Computational and Data Sciences Advanced CyberInfrastructure, or ICDS-ACI) is our high-performance computing (HPC) infrastructure. The name also refers to the services associated with this system. Roar provides secure, high-quality advanced computing and storage resources to the Penn State research community.
 
-<a name="01-02-icds-aci"></a>  
-
 #### 1.2 What does Roar do?
 
 Roar contributes to the ICDS mission by providing researchers with the hardware, software, and technical expertise needed to solve problems of scientific and societal importance. Roar provides a variety of services, including operations, backup, technical consulting, and training. It offers over 1000 servers with more than 23,000 processing cores, 6 Petabytes (PB) of disk parallel file storage, 12 PB of tape archive storage, high-speed Ethernet and Infiniband interconnects, and a large software stack. Roar is also compliant with specific NIH and NIST security controls.
-
-<a name="01-03-mission"></a>  
 
 #### 1.3 Our Mission
 
@@ -24,8 +22,7 @@ The mission of the Institute for Computational and Data Sciences is to build cap
 *   expand participation in interdisciplinary research through strategic investments and effective outreach;  
     and
 *   provide a vibrant world-class cyberinfrastructure by maintaining and continually improving hardware and software solutions and technical expertise.
-
-<a name="01-04-vision"></a>  
+ 
 
 #### 1.4 Our Vision
 

@@ -1,26 +1,25 @@
-### 9 Software Stack
+---
+title: Software Stack
+---
 
 ICDS has a software policy that explains the details of how software can be used. The policy can be read on [our policy page](https://www.icds.psu.edu/computing-services/ics-aci-policies/).  
 
-<a name="09-01-user-stack"></a>  
 
 #### 9.1 User Stack
 
 Users are able to install software into their own home and work directories as well as in group spaces. ICDS strongly recommends that research groups who compute in multiple locations do this for all of their software so that the version can be consistent across platforms.  
 
 The i-ASK Center can provide guidance for the installation of many software packages.  
-
-<a name="09-02-system-stack"></a>  
+  
 
 #### 9.2 System Stack
 
 Many commonly used applications are built and maintained by the system.  
 
-##### <span class="titlemark">9.2.1</span> <a id="x1-580008.2.1"></a>System Stack Requests
+##### 9.2.1 System Stack Requests
 
 Requests for software to be placed on the system stack can be made to the i-ASK Center. Users requesting software should show the reason for the request, typically due to licensing issues or because of the broad user base across campus.  
-
-<a name="09-03-system-stack-applications"></a>  
+ 
 
 #### 9.3 System Stack Applications
 
@@ -28,7 +27,7 @@ Because of the module families, it is hard to view all of the available software
 
 <pre>ls /opt/aci/sw/</pre>
 
-##### <span class="titlemark">9.3.1</span> <a id="x1-600008.3.1"></a>COMSOL
+##### 9.3.1 COMSOL
 
 To open COMSOL, first log into ACI-i using Open OnDemand. More information regarding how to do this can be found in [section 5.4.1](https://www.icds.psu.edu/computing-services/ics-aci-user-guide/#05-04-connecting-aci). Next open a terminal by going to the top left corner and clicking on
 
@@ -44,63 +43,46 @@ The graphical user interface for COMSOL should now be opened and COMSOL can be u
 
 An example of a PBS script to submit a COMSOL job:
 
-<pre class="script">#!/bin/bash
+<pre class="script">
+	#!/bin/bash
+	#PBS -l nodes=1:ppn=4
+	#PBS -l walltime=12:00:00
+	#PBS -A open
+	#PBS -o ComsolPBS.output
+	#PBS -e ComsolPBS.error
+	#PBS -m abe
+	#PBS -M abc1234@psu.edu
+	#PBS -n myComsolJob
 
-#PBS -l nodes=1:ppn=4
+	# Get started
+	echo " "
+	echo "Job started on ‘hostname‘ at ‘date‘"
+	echo " "
 
-#PBS -l walltime=12:00:00
+	# Load in Comsol
+	module purge
+	module load comsol
 
-#PBS -A open
+	# Go to the correct place
+	cd $PBS_O_WORKDIR
 
-#PBS -o ComsolPBS.output
+	# Run the job itself
+	comsol batch -inputfile inputFile.mph -outputfile /path/to/output/outputFileName.mph -batchlog log.txt
 
-#PBS -e ComsolPBS.error
-
-#PBS -m abe
-
-#PBS -M abc1234@psu.edu
-
-#PBS -n myComsolJob
-
-# Get started
-
-echo " "
-
-echo "Job started on ‘hostname‘ at ‘date‘"
-
-echo " "
-
-# Load in Comsol
-
-module purge
-
-module load comsol
-
-# Go to the correct place
-
-cd $PBS_O_WORKDIR
-
-# Run the job itself
-
-comsol batch -inputfile inputFile.mph -outputfile /path/to/output/outputFileName.mph -batchlog log.txt
-
-# Finish up
-
-echo " "
-
-echo "Job Ended at ‘date‘"
-
-echo " "
-
+	# Finish up
+	echo " "
+	echo "Job Ended at ‘date‘"
+	echo " "
 </pre>
 
 More information on options used for submitting comsol jobs using the command line can be found by typing the commands:
 
-<pre>module load comsol
-comsol -h
+<pre>
+	module load comsol
+	comsol -h
 </pre>
 
-##### <span class="titlemark">9.3.2</span> <a id="x1-610008.3.2"></a>Julia
+##### 9.3.2 Julia
 
 Julia is a high-level, high-performance dynamic programming language for numerical computing. It provides a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library. Julia’s Base library, largely written in Julia itself, also integrates mature, best-of-breed open source C and Fortran libraries for linear algebra, random number generation, signal processing, and string processing.  
 
@@ -189,7 +171,7 @@ echo " "
 
 </pre>
 
-##### <span class="titlemark">9.3.3</span> <a id="x1-620008.3.3"></a>Matlab
+##### 9.3.3 Matlab
 
 Matlab is a widely used programming environment and language. The GUI can be accessed on ACI-i using the following commands:
 
@@ -271,7 +253,7 @@ echo " "
 
 For more information about Matlab, please refer to the [Matlab website](https://www.mathworks.com/products/matlab.html).  
 
-##### <span class="titlemark">9.3.4</span> <a id="x1-630008.3.4"></a>Mathematica
+##### 9.3.4 Mathematica
 
 Mathematica builds in unprecedentedly powerful algorithms across all areas many of them created at Wolfram using unique development methodologies and the unique capabilities of the Wolfram Alpha. Mathematica is built to provide industrial-strength capabilities with robust, efficient algorithms across all areas, capable of handling large-scale problems, with parallelism, GPU computing, and more . Mathematica provides a progressively higher-level environment in which as much as possible is automated so you can work as efficiently as possible.  
 
@@ -383,7 +365,7 @@ echo "
 
 </pre>
 
-##### <span class="titlemark">9.3.5</span> <a id="x1-640008.3.5"></a>Stata
+##### 9.3.5 Stata
 
 Stata is a powerful statistical package with smart data-management facilities, a wide array of up-to-date statistical techniques, and an excellent system for producing publication-quality graphs. It is widely used by many businesses and academic institutions especially in the fields of economics, sociology, political science, biomedicine and epidemiology. Stata is available for Windows, Linux/Unix, and Mac computers. There are four versions of Stata as follows:
 
@@ -394,7 +376,7 @@ Stata is a powerful statistical package with smart data-management facilities, a
 
 For parallel processing in Stata you must use stata-mp at the bottom of your PBS script. You must also indicate the number of processors (up to 16) in the PBS script as well as your do file. As a line in your do file be sure to include "set processors n", where n = the number of processors and should be the same as the number in your PBS script. An example PBS script is below where the number of processors is set to 8.  
 
-<span class="cmbx-10">Setup:</span>  
+Setup:  
 
 In Linux, load the module with the following command before you start working with Stata:
 
@@ -404,7 +386,7 @@ Note that this command will load the current version. Other available versions c
 
 <pre>module avail stata</pre>
 
-<span class="cmbx-10">Usage</span> To start Stata , type:
+Usage To start Stata , type:
 
 <pre>stata-mp</pre>
 
@@ -466,7 +448,7 @@ You can use stata-mp by substituting the stata command with the following:
 
 <pre>stata-mp -b do jobName.do</pre>
 
-##### <span class="titlemark">9.3.6</span> <a id="x1-650008.3.6"></a>Python
+##### 9.3.6 Python
 
 Python is a multi-use programming language used in a wide variety of fields. It can be run in batch mode on ACI-i or used in submitted jobs on ACI-b.  
 
@@ -534,7 +516,7 @@ For more information, please feel free to refer to the [Python website](https://
 
 An excellent resource for various plotting methods found within python can be found at the [matplotlib gallery.](https://matplotlib.org/gallery.html)
 
-##### <span class="titlemark">9.3.7</span> Singularity
+##### 9.3.7 Singularity
 
 Singularity is a _container_ system developed for use on high-performance computing clusters. Container computing allows the creation of a virtual-machine-like environment, which gives the user access to different configurations of software for use on clusters.
 

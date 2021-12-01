@@ -1,8 +1,10 @@
-### 8 Running Jobs on HPRC
+---
+title: Running Jobs on HPRC
+---
 
 HPRC jobs are submitted from the head nodes of ACI-b and will run when available resources are available on the compute nodes. Roar uses Moab and Torque for the scheduler and resource manager. Jobs can be either run in batch or interactive modes. Both are submitted using the qsub command.
 
-<a name="08-01-requesting-resources"></a>  
+  
 
 #### 8.1 Requesting Resources
 
@@ -12,7 +14,7 @@ Whether you are submitting batch or interactive jobs, you are required to provid
 • Core/node <= 20  
 • Node = 1
 
-<a name="08-012-sample-script"></a>  
+  
 
 #### 8.1.1 Sample HPRC Batch Submission Script
 
@@ -35,7 +37,7 @@ matlab-bin -nodisplay -nosplash < runThis.m > log.matlabRun
 # Finish up  
 echo "Job Ended at ‘date‘"`
 
-<a name="08-02-interactive-compute-sessions-on-hprc"></a>  
+  
 
 #### 8.2 Interactive Compute Sessions on HPRC
 
@@ -54,7 +56,7 @@ To enable X11 forwarding to the interactive job, include the -x flag (output wil
 
 `qsub -I -x -A ics-hprc -q hprc -l nodes=1:ppn=20 -l mem=32gb -l walltime=1:23:30:00`
 
-<a name="08-03-requesting-a-custom-singularity-container-on-hprc"></a>  
+  
 
 #### 8.3 Requesting a Custom Singularity Container on HPRC
 
@@ -96,7 +98,7 @@ Here is an example where the container is specified within your submission scrip
 #PBS -A ics-hprc  
 #PBS -v SINGULARITY_CONTAINER="/storage/work/abc123/singularity/bionic-base.simg"`
 
-<a name="08-04-specifying-a-custom-bash-environment-on-hprc"></a>  
+  
 
 #### 8.4 Specifying a Custom Bash Environment on HPRC
 

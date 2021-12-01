@@ -1,9 +1,8 @@
+---
+title: Application Development
+---
 
-<a name="06-00-application-development"></a>  
-
-### 6 Application Development
-
-<a name="06-01-version-control"></a>  
+  
 
 #### 6.1 Version Control
 
@@ -15,7 +14,7 @@ Version control is a way to track multiple versions of a code. This has a place 
 
 Your repository will have a master branch, where the current production code usually exists, and other branches that may be for any other purpose, such as development or variations. Branches can either be merged back to the master branch as features are added and execution is validated, or kept separate if the usage requires multiple working versions of the code. It is up to the user to define how their repository is set-up as well as to keep non-local versions of the repository as up-to-date as desired. There are great online resources for `git` including [excellent documentation](http://git-scm.com/doc) and [tutorials](http://try.github.io).
 
-<a name="06-02-basic-compilation"></a>  
+  
 
 #### 6.2 Basic Compilation
 
@@ -52,13 +51,13 @@ and can set environment variables. The nomenclature for repeated sections can us
 
 It is possible to either make the output file directly executable and add the location to your path to call this from anywhere, or to execute the output from the location of the file directly. For our hello example from before, this can be done using the command `./hello.out` from the directory in which the executable exists.
 
-<a name="06-03-libraries"></a>  
+  
 
 #### 6.3 Libraries
 
 Roar offers many optimized libraries for users to link to. Please see the most common libraries listed below.  
 
-##### <span class="titlemark">6.3.1</span> <a id="x1-400006.3.1"></a>MKL
+##### <span class="titlemark">6.3.1</span> MKL
 
 Intel Math Kernel Library (MKL) consists of commonly used mathematical operations in computational science. The functions in MKL are optimized for use on Intel processors. More information can be found [here.](https://software.intel.com/en-us/mkl)  
 
@@ -66,7 +65,7 @@ The MKL module can be loaded using the command
 
 <pre>module load mkl</pre>
 
-##### <span class="titlemark">6.3.2</span> <a id="x1-410006.3.2"></a>LAPACK
+##### <span class="titlemark">6.3.2</span> LAPACK
 
 LAPACK (Linear Algebra Package) is a software library used for numerical linear algebra. It can handle many common numerical algebra computations such as solving linear systems, eigenvalue problems, and matrix factorization. It depends on BLAS. More information can be found on the [website.](http://www.netlib.org/lapack/)  
 
@@ -76,7 +75,7 @@ You can load the LAPACK module using the commands:
 module load lapack/3.6.0
 </pre>
 
-##### <span class="titlemark">6.3.3</span> <a id="x1-420006.3.3"></a>BLAS
+##### <span class="titlemark">6.3.3</span> BLAS
 
 BLAS (Basic Linear Algebra Subprograms) is a collection of low level matrix and vector operations such as vector addition, scalar multiplication, matrix multiplication, etc. For more information, refer to this [link.](http://www.netlib.org/blas/)  
 
@@ -84,7 +83,7 @@ The BLAS module can be loaded with the command
 
 <pre>module load blas</pre>
 
-##### <span class="titlemark">6.3.5</span> <a id="x1-440006.3.5"></a>Boost
+##### <span class="titlemark">6.3.5</span> Boost
 
 Boost is a C++ library that contains many useful functions covering a wide range of applications such as linear algebra and multithreading. More information can be found [here.](http://www.boost.org/)
 
@@ -92,7 +91,7 @@ You can load Boost with the command
 
 <pre>module load boost</pre>
 
-##### <span class="titlemark">6.3.6</span> <a id="x1-450006.3.6"></a>PETsc
+##### <span class="titlemark">6.3.6</span> PETsc
 
 The Portable, Extensible Toolkit for Scientific Computation (PETsc, pronounced PET-see) is a suite of data structures and routines for solving partial differential equations and sparse matrices in a parallel fashion that is scalable. It was developed by Argonne National Laboratory.  
 

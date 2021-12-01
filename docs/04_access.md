@@ -1,14 +1,16 @@
-### 4 System Access
+---
+title: System Access
+---
 
 The Roar systems are available for all users with Penn State access. Non-Penn State members who are collaborating with Penn State researchers are able to get a Penn State SLIM access account and then sign up for a Roar account.
 
-<a name="04-01-sponsorship"></a>  
+  
 
 #### 4.1 Sponsorship
 
 Each non-faculty member signing up for an account must have a sponsor. This is typically the adviser or course instructor. The request requires the Penn State username and not an alias. The [Penn State directory](http://www.work.psu.edu/ldap/) can be used to figure out the username if only another email alias is known.  
 
-<a name="04-02-permissions-use-resources"></a>  
+  
 
 #### 4.2 Permissions to use Resources
 
@@ -16,7 +18,7 @@ The users who have access to an allocation are placed in an allocation group. Us
 
 To gain access to an allocation or a group storage, have the PI send an email to the i-ASK Center ([iask@ics.psu.edu](mailto:iask@ics.psu.edu)) stating the user IDs (ex. abc123) and the allocation(s) and group storage(s) you wish to add them to. This explicit permission must be granted before users are allowed access.  
 
-<a name="04-03-getting-account"></a>  
+  
 
 #### 4.3 Getting an Account
 

@@ -1,8 +1,10 @@
-### 3 System Overview
+---
+title: System Overview
+---
 
 Roar is a heterogeneous cluster that consists of multiple node-types connected to a common file system. The primary portions are ACI-b, the batch portion of the cluster; ACI-i, the interactive portion; and the data-manager nodes.
 
-<a name="03-01-aci-b"></a>  
+  
 
 #### 3.1 ACI-b
 
@@ -16,7 +18,7 @@ Typically, a job submission script including the resource requests and the comma
 
 <pre>qsub subScript.pbs</pre>
 
-##### <span class="titlemark">3.1.1</span> <a id="x1-90003.1.1"></a>Types of ACI-b Nodes
+##### <span class="titlemark">3.1.1</span> Types of ACI-b Nodes
 
 Compute resources are available in four configurations: Basic Memory, Standard Memory, High Memory, and GPU.
 
@@ -27,7 +29,7 @@ Compute resources are available in four configurations: Basic Memory, Standard M
 |High|2.2 GHz Intel Xeon Processor, 40 CPU/server, 1 TB RAM, FDR Infiniband, 10 Gbps Ethernet|
 |GPU|2.5 GHz Intel Xeon Processor, 2 Nvidia Tesla K80 computing modules/server, 24 CPU/server, Double Precision, FDR Infiniband, 10 Gbps Ethernet|
 
-<a name="03-02-aci"></a>  
+  
 
 #### 3.2 ACI-I
 
@@ -47,7 +49,7 @@ Individual processes are limited to
 
 on ACI-i. Note that the resident memory constraint still allows for memory that can be sent to virtual memory during times of high usage.  
 
-<a name="03-03-aci-open-queue"></a>  
+  
 
 #### 3.3 Roar Open Queue
 
@@ -64,7 +66,7 @@ Jobs running on the open allocation are placed on available compute nodes. These
 
 ACI-i is open to any and all users, regardless of allocation.  
 
-<a name="03-04-hprc"></a>  
+  
 
 #### 3.4 HPRC
 
@@ -80,7 +82,7 @@ Typically, a job submission script including the resource requests and the comma
 
 <pre>qsub subScript.pbs</pre>
 
-<a name="03-05-filesystems"></a>  
+  
 
 #### 3.5 Filesystems
 
@@ -105,7 +107,7 @@ By design, archival storage is best suited for storing relatively small numbers 
 |Archive|/archive/groupID|5 TB blocks|Suggested lower limit of 1G/file or 1,000/TB|No|None|
 
 
-<a name="03-06-data-manager"></a>  
+  
 
 #### 3.6 Data Manager
 
@@ -123,4 +125,4 @@ to log in. After logging in, you can perform your file transfer.
 
 **Important:** Do not use tools that attempt to mirror or replicate directory and file trees (such as rsync) into archive storage. Using such tools with archive storage can result in system degradations that negatively impact all users of our shared system.
 
-<a name="04-00-system-access"></a>  
+  

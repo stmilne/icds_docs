@@ -1,8 +1,10 @@
-### 7 Running Jobs on ACI-b
+---
+title: Running Jobs on ACI-b
+---
 
 Jobs are submitted from the head nodes of ACI-b and will run when dedicated resources are available on the compute nodes. Roar uses Moab and Torque for the scheduler and resource manager. Jobs can be either run in batch or interactive modes. Both are submitted using the qsub command.  
 
-<a name="07-01-requesting-resources"></a>  
+  
 
 #### 7.1 Requesting Resources
 
@@ -30,7 +32,7 @@ scivybridge|Intel Xeon E5-2680v2 2.8GHz|256 GB Total|
 
 
 
-##### <span class="titlemark">7.1.1</span> <a id="x1-480007.1.1"></a>Sample Batch Submission Script
+##### <span class="titlemark">7.1.1</span> Sample Batch Submission Script
 
 The following is a submission script for a Matlab job that will run for 5 minutes on one processor using the open queue.
 
@@ -72,7 +74,7 @@ This script would be submitted using the command
 
 from the directory containing the submission and matlab scripts.  
 
-<a name="07-02-interactive-compute-sessions-aci-b"></a>  
+  
 
 #### 7.2 Interactive Compute Sessions on ACI-b
 
@@ -96,7 +98,7 @@ Note that the node the user is on changes from log-in node (aci-lgn-001) to a ba
 
 It is recommended that you compile your code using an interactive job on the nodes that your job will run.  
 
-<a name="07-03-pbs-environmental-variables"></a>  
+  
 
 #### 7.3 PBS Environmental Variables
 
@@ -114,7 +116,7 @@ run within a submitted job.
 |PBS_NODEFILE|A file in which all relevant node hostnames are stored for a job.|
 
 
-##### <span class="titlemark">7.3.1</span> <a id="x1-510007.3.1"></a>Viewing and Deleting Jobs
+##### <span class="titlemark">7.3.1</span> Viewing and Deleting Jobs
 
 There are several ways to view existing jobs. The `qstat` command can give some basic information about your own queued and running jobs.
 
@@ -144,13 +146,13 @@ Jobs that are not responding may require being purged from the nodes. You can do
 
 Note that you are only able to delete your own jobs, not other users.  
 
-##### <span class="titlemark">7.3.2</span> <a id="x1-520007.3.2"></a>Additional Job Information
+##### <span class="titlemark">7.3.2</span> Additional Job Information
 
 You can use the checkjob command to view some additional information about queued and running jobs. For example, to give very verbose information about job 548, you can use the command:
 
 <pre>checkjob 548 -v -v</pre>
 
-<a name="07-04-great-allocations"></a>  
+  
 
 #### 7.4 GReaT Allocations
 
@@ -239,7 +241,7 @@ Users interested in their own usage may want to investigate several of the other
 mam-list-transactions
 </pre>
 
-<a name="07-05-aci-b-gpu-nodes"></a>  
+  
 
 #### 7.5 ACI-b GPU nodes
 

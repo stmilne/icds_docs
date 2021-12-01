@@ -1,12 +1,14 @@
-### 5 Basics of the Roar Resources
+---
+title: Basics of the Roar Resources
+---
 
-<a name="05-01-system-usage"></a>  
+  
 
 #### 5.1 System Usage
 
 The Roar system uses the Red Hat 7.9 Linux operating system with the module system set up for software. All users will have to use the terminal to access programs, including Open OnDemand users of ACI-i.
 
-##### <span class="titlemark">5.1.1</span> <a id="x1-210005.1.1"></a>Shells
+##### <span class="titlemark">5.1.1</span> Shells
 
 Unix/Linux shells are command line interpreters that allow for a user to interact with their operating system through utility commands and programs. The Default Unix/Linux shell is BASH (the Bourne-Again SHell) which has extensive online documentation, and common or necessary commands are shown in the table below.
 
@@ -71,11 +73,11 @@ All shells utilize configuration files. For BASH, this is split between 2 files:
 
 <pre>if [ -f ~/.bashrc ]; then . ~/.bashrc fi</pre>
 
-##### <span class="titlemark">5.1.2</span> <a id="x1-220005.1.2"></a>Alternative Shells
+##### <span class="titlemark">5.1.2</span> Alternative Shells
 
 BASH is only the default shell, and it doesn’t come with quite a few features that many Linux power-users would like to have on the command-line. Other common shells include KSH (KornSHell), ZSH (Z SHell), and FISH (Friendly-Interface SHell). These shells all have documentation available online regarding their installation and customization.  
 
-##### <span class="titlemark">5.1.3</span> <a id="x1-230005.1.3"></a>Environmental Variables
+##### <span class="titlemark">5.1.3</span> Environmental Variables
 
 Environment variables are values that pertain to certain aspects of an operating system’s configurations. These variables are typically used by utilities and programs for things like finding out where the user’s home directory is (`$HOME`) or where to look for executable files (`$PATH`). The prompt for BASH is held as the variable `PS1`.  
 
@@ -117,17 +119,17 @@ The environment variables allow for script portability between different systems
 |TMPDIR|The directory in which a job's temporary files are placed (created and deleted automatically)|
 
 
-##### <span class="titlemark">5.1.4</span> <a id="x1-240005.1.4"></a>References
+##### <span class="titlemark">5.1.4</span> References
 
 The Linux terminal and submitting jobs are not unique to Roar. You can find many different training resources online for these. The Linux foundation offers [free training](https://training.linuxfoundation.org/free-linux-training). Lots of great information and tutorials for everyone from beginner Linux user to advanced users can be found [here](https://www.linux.org/pages/download/). Linux has been around for a long time. Therefore, any problem you might be having, someone has probably already had. It is always worthwhile to look around [stack exchange](https://unix.stackexchange.com/) to see if your question has already been answered.
 
-<a name="05-02-module-system"></a>  
+  
 
 #### 5.2 Module System
 
 Roar now uses the Lmod environment modules system. Environment Modules provide a convenient way to dynamically change the users environment through modulefiles. This includes easily adding or removing directories to the `PATH`, `LD_LIBRARY_PATH`, `MANPATH`, and `INFOPATH` environment variables. A modulefile contains the necessary information to allow a user to run a particular application or provide access to a particular library. All of this can be done dynamically without logging out and back in. Modulefiles for applications modify the users path to make access easy. Modulefiles for library packages provide environment variables that specify where the library and header files can be found. Learn more about modules on [TACC’s website](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod).
 
-##### <span class="titlemark">5.2.1</span> <a id="x1-260005.2.1"></a>Module Families
+##### <span class="titlemark">5.2.1</span> Module Families
 
 Roar uses module families for compilers and parallelization libraries. Modules that are built with a parent module, such as a compiler, are only available when the parent module is loaded. For example, the version of LAPACK built with the gcc module is only available when the gcc module is located.
 
@@ -143,7 +145,7 @@ module avail
 
 </pre>
 
-##### <span class="titlemark">5.2.2</span> <a id="x1-270005.2.2"></a>Using Modules
+##### <span class="titlemark">5.2.2</span> Using Modules
 
 You can load modules into your environment with the command with the module load command. For example, to load the gcc module, you can use the command:
 
@@ -163,7 +165,7 @@ It is also possible to remove all of your loaded modules at once using purge:
 
 <pre>module purge</pre>
 
-##### <span class="titlemark">5.2.3</span> <a id="x1-280005.2.3"></a>Querying Modules
+##### <span class="titlemark">5.2.3</span> Querying Modules
 
 You can view the available modules using the command:
 
@@ -217,7 +219,7 @@ pushenv("HDF","/opt/aci/sw/hdf5/1.8.18_gcc-8.3.1")
 
 Note that this tells you some information about the software, gives a website for more help and shows the environment variables that are modified. The environment manipulation section can be very helpful for users who are compiling codes and linking to libraries as these paths indicate where the relevant objects may be found.  
 
-##### <span class="titlemark">5.2.4</span> <a id="x1-290005.2.4"></a>Controlling Modules Loaded at Login
+##### <span class="titlemark">5.2.4</span> Controlling Modules Loaded at Login
 
 Most shells have a configuration file that allows you to set aliases (nicknames for commands both simple or complex), set environment variables, and automatically execute programs and commands. In this case we are interested in the last mentioned feature: automating commands at login. For BASH there are two files at play: `~/.bash_profile` and `~/.bashrc.` To force your bashrc to be sourced in every opened terminal and SSH session, include this code in your bash_profile:
 
@@ -234,7 +236,7 @@ Once that has been done, you can add whatever automated module loads you want in
 
 The version specification is optional, excluding it will cause whatever the default version is to be loaded. Other shells have similar configuration methods that are detailed in online documentation.
 
-<a name="05-03-connecting-aci-b"></a>  
+  
 
 #### 5.3 Connecting to ACI-b
 
@@ -246,13 +248,13 @@ using `ssh`. Users  connecting with ssh are encouraged to use the secure x-windo
 
 <pre>ssh -Y abc123@submit.aci.ics.psu.edu</pre>
 
-<a name="05-04-connecting-aci"></a>  
+  
 
 #### 5.4 Connecting to ACI-i
 
 Users connect to ACI-i with Open OnDemand.
 
-<a name="05-041-open-ondemand"></a>  
+  
 
 #### 5.4.1 Open OnDemand
 
@@ -269,7 +271,7 @@ PORTAL.ACI.ICS.PSU.EDU
 
 <iframe loading="lazy" src="https://www.youtube.com/embed/ekiz0o94pwQ" allowfullscreen="allowfullscreen" width="560" height="315" frameborder="0"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe>
 
-<a name="05-05-connecting-to-hprc"></a>  
+  
 
 #### 5.5 Connecting to HPRC
 
@@ -281,13 +283,13 @@ Users can connect to HPRC from ACI-b head nodes, with the host name
 
 <pre>ssh -Y abc123@submit.aci.ics.psu.edu</pre>
 
-<a name="05-06-transferring-data-aci"></a>  
+  
 
 #### 5.6 Transferring Data to and from Roar
 
 There are many different ways to transfer data to and from Roar.  
 
-##### <span class="titlemark">5.6.1</span> <a id="x1-340005.5.1"></a>Command line File Transfer
+##### <span class="titlemark">5.6.1</span> Command line File Transfer
 
 There are two main command-line SSH commands to transfer files: `scp` and `sftp`. `scp` is a non-interactive command that takes a set of files to copy on the command line, copies them, and exits. `sftp` is an interactive command that opens a persistent connection through which multiple copying commands can be performed.  
 
@@ -449,7 +451,7 @@ One common pitfall that can affect users transferring files between systems with
 
 <pre>rsync -a--chmod u=rwx,g=rx,Dg+s source_dir username@remote_host:target_dir</pre>
 
-##### <span class="titlemark">5.6.2</span> <a id="x1-350005.5.2"></a>Graphical File Transfer
+##### <span class="titlemark">5.6.2</span> Graphical File Transfer
 
 WinSCP and FileZilla provide a free secure FTP (SFTP) and secure copy (SCP) client with graphical interface for Windows, Linux and Mac using SSH, allowing users to transfer files to and from our cluster file system using a drag-and-drop interface. Please use either the SCP or SFTP protocol with port 22 with the data manager nodes
 
@@ -463,7 +465,7 @@ You can see the connection process in this [ICDS tutorial video](https://www.you
 
 It is also possible to use the online interface for either Box or DropBox within Firefox on ACI-i for users who logged on with Open OnDemand. It is not currently possible to sync to your storage space on Roar at this time.  
 
-##### <span class="titlemark">5.6.3</span> <a id="x1-360005.5.3"></a>Web-based Services
+##### <span class="titlemark">5.6.3</span> Web-based Services
 
 Globus is one of the recommended methods of transferring very large data. Most HPC centers have endpoints set up allowing for optimized transfer between large centers. Users can also install personal endpoints on their own machines using Globus Connect. Its web interface allows users to transfer files from a desktop or mobile device.  
 
@@ -475,7 +477,7 @@ Select and authenticate with the other endpoint for your transfer, and initiate 
 
 There are other specialized data-transfer software available for specific needs, such as Aspera. Contact the iAsk center if you have any questions regarding using one of these specialized tools on ACI.  
 
-##### <span class="titlemark">5.6.4</span> <a id="x1-370005.5.4"></a>File Permissions
+##### <span class="titlemark">5.6.4</span> File Permissions
 
 File permissions can be seen using the `-l` flag for ls:
 
