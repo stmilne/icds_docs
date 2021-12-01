@@ -1,2 +1,5 @@
+site_name: ICDS User Guide
+site_url: https://icds-docs.readthedocs.io/en/latest
+
 theme: 
   name: readthedocs
