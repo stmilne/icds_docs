@@ -18,5 +18,5 @@ Converters:
 
 
 Documentation versions available:
-latest - current ICDS Docs
-new - Modified ICDS Docs
+original - current ICDS Docs
+latest - Modified ICDS Docs
