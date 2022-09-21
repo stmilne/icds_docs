@@ -57,13 +57,12 @@ please contact us at [icds@psu.edu](mailto:icds@psu.edu) for more information.
 |Scratch|`/gpfs/scratch/<user_id>`|
 |Group|`/gpfs/group/<PI_id>/default`|
 
-## WIP: Nearline Archival Storage
+## Nearline Archival Storage
 
 Nearline storage is only accessable from the Roar Data Management nodes.
 
 
-
-## WIP: Data Management Nodes
+## Data Management Nodes
 
 To transfer data both within Roar and between Roar and other systems, please 
 utilize the Data Management nodes as they have been optimized for effiecent data 
@@ -210,9 +209,9 @@ ICDS offers the following endpoints for Globus users:
 
 |Resource|File System Access|Endpoint Name(s)|
 |--- |--- |--- |
-|Roar|Scratch, Home, Work, Group/Active, Nearline|PennState_ICS-ACI_DTN_EndPnt_01  
-PennState_ICS-ACI_DTN_EndPnt_02  
-PennState_ICS-ACI_DTN_EndPnt_03|
+|Roar|Scratch, Home, Work, Group/Active, Nearline|PennState_ICS-ACI_DTN_EndPnt_01|
+|||PennState_ICS-ACI_DTN_EndPnt_02|
+|||PennState_ICS-ACI_DTN_EndPnt_03|
 |Roar Collab|Home, Work, Group/Active|PennState_ICDS_RC|
 
 To transfer data between established endpoints, like those specified in the table 
