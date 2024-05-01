@@ -1,6 +1,9 @@
 
 # Using Software
 
+
+
+
 The software stack on Roar Collab (RC) provides a wide variety of software to the entire user community. There are two software stacks available on RC.
 
 - **System software stack**: contains software that is available to all users by default upon logging into the system without a need to load anything.
@@ -242,4 +245,89 @@ Compiling software from source is the most involved option for using software on
 ## Software-Specific Guides
 
 
+
+
+### Python
+
+Python is a high-level, general-purpose programming language.
+
+
+#### Python versions on RC
+
+Python is available by default to all users on the system software stack, and it is also available on the central software stack. Additionally, users can install their own instances of Python in a variety of ways in either their userspace or in group spaces.
+
+
+#### Install Python Packages with `pip`
+
+Python packages can be installed easily using `pip`. By default, `pip` will attempt to install packages to a system location, but RC is a shared system. Users do not have write access to system locations on shared systems. The packages can instead be installed in *~/.local*, which is a user location, using the following:
+```
+$ pip install --user <package>
+```
+
+Also, packages can be installed to a custom specified location using the `--target` option:
+```
+$ pip install --target=<custom_install_path> <package>
+```
+
+
+### R
+
+R is a free software environment for statistical computing and graphics.
+
+
+#### R Versions on RC
+
+R users should make sure that the version of R remains consistent. RC has several R versions available, and when a package is installed in one version, it is not always accessible when operating in another version. Always check the R version and remain consistent! R modules can be loaded from the central software stack, and R can also be installed by users in a variety of ways within their userspace or group spaces.
+
+
+#### Install R Packages
+
+R manages some dependencies and versions through the CRAN-like repos. R packages can be installed from within the R console with the following command:
+```
+> install.packages( <package> )
+```
+
+After installation, packages can then be loaded using the following command in the R console:
+```
+> library( <package> )
+```
+
+It is recommended to review dependencies of any packages to be installed because additional software may have to be loaded in the environment before launching the R console. For example, some R packages utilize CMake to perform the installation. In that case, the *cmake* module should be loaded before launching the R console session.
+
+
+#### R Package Installation Example
+
+To install the ggplot2 R package, first search ggplot2 online to see if there are installation instructions. A quick search shows that ggplot2 is included in the tidyverse package and that the recommended installation instructions are the following:
+```
+# The easiest ways to get ggplot2 is to install the whole tidyverse package:
+> install.packages("tidyverse")
+
+# Alternatively, install just ggplot2:
+> install.packages("ggplot2")
+```
+
+Searching for install instructions usually provides all the necessary information!
+
+Some R packages may require changes to the user environment before the package can be installed successfully within the R console. Typically, the user environment change is as simple as accessing a newer compiler version by loading a software module like *intel* with
+```
+$ module load intel
+```
+
+Sometimes, installing R packages may be a little more involved. To install the *units* R package, for example, an additional library must be downloaded and installed locally in order for the package to be installed properly. To install the *units* R package on RC, perform the following commands in an interactive session on a compute node:
+```
+$ cd ~/scratch
+$ wget https://downloads.unidata.ucar.edu/udunits/2.2.28/udunits-2.2.28.tar.gz
+$ tar -xvf udunits-2.2.28.tar.gz
+$ cd udunits-2.2.28
+$ ./configure prefix=$HOME/.local
+$ make
+$ make install
+$ export UDUNITS2_INCLUDE=$HOME/.local/include
+$ export UDUNITS2_LIBS=$HOME/.local/lib
+$ export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+$ module load r/4.2.1
+$ R
+> install.packages("units")
+> library(units)
+```
 
