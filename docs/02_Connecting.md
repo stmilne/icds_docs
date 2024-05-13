@@ -19,7 +19,7 @@ request access to Roar Collab (RC) by submitting an
 For any external collaborators, a university faculty member must set up a 
 [sponsored access account](https://security.psu.edu/services/penn-state-accts/sponsored) 
 with the university Accounts Office to provide the collaborator with an access 
-account. Once the collaborator access account is active, submit an 
+account. Once the collaborator's access account is active, submit an 
 [account request](https://www.icds.psu.edu/computing-services/account-setup) 
 to RC.
 
@@ -63,12 +63,10 @@ connect using the following command:
 ```
 $ ssh <userid>@submit.hpc.psu.edu
 ```
+
 To connect, an RC account linked to an active Penn State access account user ID 
 and password is required. By default, port 22 is used for secure shell 
-connections.
-
-A password must be entered and then multi-factor authentication must be 
-completed successfully to complete the login.
+connections. A password must be entered and then multi-factor authentication must be completed successfully to complete the login.
 
 .. note::
     The connection to the system is made with a submit node. Submit nodes are  
@@ -86,6 +84,7 @@ completed successfully to complete the login.
 ## Linux Commands Quick Reference
 
 | Command | Description |
+| ---- | ---- |
 | ls | Lists the files in the current working directory |
 | cd | Changes the current directory in order to navigate to a new directory |
 | mv | Moves a file or directory to a new location |
@@ -116,6 +115,17 @@ completed successfully to complete the login.
 | Ctrl + c | Kills a process |
 | Ctrl + z | Suspends a process |
 | Ctrl + r | Searches the command history for a string |
+
+Special characters are useful in many commands.
+
+| Special Character | Description |
+| .----. | ---- |
+| `~` | Indicates the home directory |
+| `.` | Indicates current working directory |
+| `..` | Indicates parent of current working directory |
+| `*` | Wildcard character for any string |
+| `|` | Connects the output of a command to the input of another |
+| `>` | Redirects a command output |
 
 For complete details on any command listed above and more, use `man <command>` 
 in a terminal session to display the manual page for the command or search 
