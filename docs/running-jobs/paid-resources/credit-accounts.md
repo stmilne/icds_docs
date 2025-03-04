@@ -153,7 +153,7 @@ For example, to request a job only run on
 ```
 
 
-## Using an Allocation on the Command Line
+## Using an Credit Account on the Command Line
 
 To submit a job using a credit account, supply the `--account` or `-A` resource directive with the credit account name, 
 along with the desired hardware `--partition`.
