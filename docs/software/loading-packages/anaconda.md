@@ -117,7 +117,7 @@ select instead "Use custom text field", and enter the following text:
 ```
 module load anaconda
 conda activate <environment>
-export CONDAENVLIB=~/.conda/envs/<environment>/lib
+export CONDAENVLIB=$WORK/.conda/envs/<environment>/lib
 export LD_LIBRARY_PATH=$CONDAENVLIB:$LD_LIBRARY_PATH
 ```
 
@@ -125,6 +125,6 @@ Notes:
 
 - The export commands help RStudio load some libraries 
 while accessing the conda environment's R installation. 
-- The default location of conda environments is `~/.conda/envs`.
+- The default location of conda environments is `$WORK/.conda/envs`.
 If your environment is installed somewhere else, 
 `CONDAENVLIB` should be set accordingly. 
