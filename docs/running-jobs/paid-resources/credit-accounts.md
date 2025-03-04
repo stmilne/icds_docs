@@ -51,13 +51,16 @@ For more options and details on their use, check `job-estimate --help`.
 
 ### Current balance information
 
-The `get_balance` command can be used to show current credit account balances. To use, supply the credit account name:
+The `get_balance` command can be used to show current accounts and balances:
 
 ```
-get_balance <credit_account>
+$ get_balance
+Account                  Type         Resources
+--------                 -------      ----------------
+open                     Open
 ```
 
-There are options for viewing the output in different units. Use `get_balance -h` for additional usage information.
+There are options for viewing additional details for specific accounts and people. Use `get_balance --help` for additional usage information.
 
 
 ## Available Hardware Partitions
