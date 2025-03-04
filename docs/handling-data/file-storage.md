@@ -41,6 +41,21 @@ On Roar Restricted, quota levels are the same, however users do not have access 
 directory and group storage directories are located in the restricted storage space (/restricted/group).
 
 
+## Monitoring storage use
+
+Exceeding quotas on home or work directories can result in job errors, incomplete file creation, or even login issues.
+
+The `quota_check` utility reports total usage for all storage locations available, giving you an overview of storage usage.
+
+To see the breakdown of file and directory size, [`du`][du] can be used. Combining this with the ['sort'][sort] command allows 
+for quick identification of directories that are using the most storage.
+[du]: https://man7.org/linux/man-pages/man1/du.1.html
+[sort]: https://man7.org/linux/man-pages/man1/sort.1.html
+
+``
+du -sch .[!.]* * | sort -hr
+``
+
 ### Solution to common quota issues in home
 
 Many user-level configuration files and package libraries are stored in the home directory by default.
@@ -63,29 +78,6 @@ ln -s $WORK/.comsol ~/.comsol
 
 This can be repeated for any directory in home that is causing the out of space error.
 
-
-## Monitoring storage use
-
-If you fill or nearly fill your home or work directories,
-weird errors will result when you try to run programs or write files.
-To avoid this, keep an eye on your file sizes and total usage.
-
-The `quota_check` utility reports total usage for all storage locations 
-available to your account.
-
-To see the breakdown of file and directory size, [`du`][du] can be used
-[du]: https://man7.org/linux/man-pages/man1/du.1.html
-
-`du -sh *` gives "human-readable" sizes (in MB, GB, TB) 
-for each item in the current directory.
-
-In managing storage, we often want to know where the big files are.
-``
-du -sh * | sort -h -r
-``
-lists directory sizes in order from large to small
-(the output of du is "piped" to [sort][sort]).
-[sort]: https://man7.org/linux/man-pages/man1/sort.1.html
 
 ## Archive storage
 
