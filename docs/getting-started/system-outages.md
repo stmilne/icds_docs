@@ -46,9 +46,10 @@ Includes user test for the following applications:
  - MATLAB sine_wave 
 
 **Your input is valuable**. At the conclusion of every outage, ICDS engineers run extensive use case tests to ensure that the system will work as expected. If your team runs your own post outage tests or if you have ideas for tests you’d like ICDS engineers to run, [please let us know.](mailto:icds@psu.edu?subject=Post-Outage%20Testing%20Feedback)
- 
  
+
 ## Planned Outage 2025-05-14
+
 
 #### Outage Duration
 
@@ -83,7 +84,8 @@ Includes user test for the following applications:
 
  - License Updates: MATLAB, COMSOL, Mathematica, tecplot **Complete**
 
- - COMSOL configuration change to set license time out to 1 hour of inactivity. Inactivity is defined as no mouse or keyboard activity with the gui **or** active COMSOL model running. **Complete**
+ - COMSOL configuration change to set license TIMEOUT to 1 hour of inactivity.
+      - Inactivity is defined as no mouse or keyboard activity with the gui **or** active COMSOL model running.
 
 
 #### Known issues: 
