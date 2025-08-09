@@ -78,13 +78,12 @@ which is the directory from which the job was submitted.
 ```
 sbatch myScript.sh arg1 arg2
 ```
-In the script, arguments `arg1` and `arg2` can be accessed with `$1` and `$2` as usual.
+In the script, arguments `arg1` and `arg2` can be accessed with `$1` and `$2` as usual.  
 `sbatch` can also pass values by assigning variables like this:
 ```
 sbatch --export=VAR1=arg1, VAR2=arg2 myScript.sh
 ```
 In the script, `$VAR1` and `$VAR2` are set to `arg1` and `arg2`.
-
 
 For more information on partitions, see [Partitions][partitions].  
 For more information on hardware requests, see [Hardware requests][hardware].
