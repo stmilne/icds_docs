@@ -17,7 +17,6 @@ For a batch job paid by a credit account, to request a single GPU:
 
 To request n GPUs, replace 1 above by n.  
 To request a specific model of GPU, use `--gres=gpu:a100:1`.
-(Alternative syntax: `--gpus=1` and `--gpus=a100:1`.)
 
 For an interactive job paid by a credit account, use `salloc`:
 ```
