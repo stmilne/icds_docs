@@ -53,15 +53,25 @@ Includes user test for the following applications:
 #### Outage duration
 
  - Planned Jan 08, 2026 17:00 -- Jan 10, 2026 17:00
+ - Actual  Jan 08, 2026 17:00 -- Jan 09, 2026 19:44
 
 #### Plan of action
 
  - DATA CENTER: Power circuit and UPS maintenance
- - STORAGE: Migrate /scratch
- - SCHEDULER: Reconfigure open usage
- - CLUSTER: reconfigure node support
- - Operating System: Security and system software updates
+ - STORAGE: Migrate /scratch **Complete**
+    - Enforcing quota on /scratch on Vast storage.
+    - Previous scratch mounted at /oldscratch on globus and submit nodes through February
 
+ - SCHEDULER: Reconfigure open usage **Complete**
+    - The open partition and any jobs in the open partition were removed
+    - Jobs submitted to "open" partition will be pushed to "basic" partition
+    - Limits of 10 credits/user for January open account.  PIs can apply for READ credits.
+
+ - CLUSTER: reconfigure node support **Complete**
+    - Older nodes only used by the open partition were removed from Slurm configuration
+    
+ - Operating System: Security and system software updates **Complete**
+    - draft package list:  [image_pkg_update_list_2026-01-08.txt](../img/image_pkg_update_list_2026-01-08.txt)
  
 ## Planned outage 2025-08-13
 
