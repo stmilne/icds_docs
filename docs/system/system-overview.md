@@ -47,13 +47,12 @@ partition is a logical grouping of compute nodes (servers) that your job can run
 
 Nodes on Roar are grouped into four different hardware partitions:
 
-- **basic** – CPU nodes without Infiniband, for jobs that fit on a single node.
-- **standard** – CPU nodes with Infiniband (essential for multinode jobs).
-- **himem** – CPU nodes with extra memory, for memory-intensive jobs.
+- **basic (4 GB/core)** – CPU nodes without Infiniband, for jobs that fit on a single node.
+- **standard (8 GB/core)** – CPU nodes with Infiniband (essential for multinode jobs).
+- **himem (20 GB/core)** – CPU nodes with extra memory, for memory-intensive jobs.
 - **interactive** – Nodes with graphics cards, that service the Portal.
 
-All the various types of GPU nodes are grouped into the standard partition,
-except the P100 GPU nodes that service the interactive partition.
+All GPU nodes are available in the standard partition.
 
 In addition, there is a partition not associated with specific hardware:
 
@@ -65,6 +64,14 @@ the #SBATCH directive:
 ```bash
 #SBATCH --partition=<partition_name>
 ```
+
+!!! tip Selecting the correct partition
+    Unless you have specific resource demands (such as graphical support or 
+    Infiniband) it is best to select the partition that best suites the memory 
+    per core ratio your jobs need. 
+    
+    For example, if you need 8 cores and 64 GB of memory, the standard 
+    partition would best fit your memory to core ratio.
 
 To see a list of all available partitions and their status, you can use the sinfo command - 
 
