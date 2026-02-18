@@ -11,6 +11,11 @@ Depending on how well designed and documented the software is,
 installation may be straightforward and self-contained, 
 or may require extensive modification to install missing dependent packages.
 
+!!! note "Container support on the RC cluster"
+    Docker and Docker Compose are not supported due to privilege restrictions.
+    Use Apptainer instead; it can run Docker images but does not support Docker Compose or multi-container orchestration.
+
+
 ## No root access
 
 If you have worked with a laptop running Linux,

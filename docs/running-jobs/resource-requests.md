@@ -92,6 +92,9 @@ For credit accounts, it is helpful to estimate how many credits a batch job woul
 job_estimate <submit file>
 ```
 
+Additionally, for users who schedule jobs interactively through the portal, an estimate of the credits required for the job is displayed near the Launch button once you select your batch options and partition. This estimate updates dynamically based on your selections, allowing you to understand the approximate credit cost before starting the job.
+
+
 ### Selecting nodes, cores, and memory
 
 Choosing the right resources is critical for efficiency.

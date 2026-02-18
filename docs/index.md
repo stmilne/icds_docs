@@ -34,4 +34,4 @@ This page also lists other events of interest to the computational and data scie
 
 [ICDS-related University polices][policies] regulate data protection,
 access control, software acceptable use, and the terms of paid allocations.
-[policies]: https://www.icds.psu.edu/computing-services/roar-policies/
+[policies]: https://www.icds.psu.edu/services/roar/user-policies/
