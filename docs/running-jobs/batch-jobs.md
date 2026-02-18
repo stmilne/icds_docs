@@ -130,6 +130,8 @@ job_estimate <submit file>
 which reports the cost in credits.
 For more on `job_estimate`, execute `job_estimate --help`.
 
+Additionally, for users who schedule jobs interactively through the portal, an estimate of the credits required for the job is displayed near the Launch button once you select your batch options and partition. This estimate updates dynamically based on your selections, allowing you to understand the approximate credit cost before starting the job.
+
 The Slurm command [`sacct`][sacct]
 reports the resources used by a completed batch job,
 which helps users learn what resources to request next time.
