@@ -1,28 +1,29 @@
 # Tips for beginners
 
-!!! warning "Don't use submit nodes for heavy computing."
+!!! note "Don't use submit nodes for heavy computing."
      Submit nodes are for preparing files, submitting jobs, 
      examining results, and transferring files.
 
-!!! warning "Don't store files on scratch."
+!!! note "Don't store files on scratch."
      [Scratch is not backed up](../file-system/file-storage.md/#quotas), 
      and files older than 30 days old are deleted.
 
-!!! warning "Don't overrun your file storage quota."
+!!! note "Monitor your storage quota"
      If you fill your allotted disk space, weird errors occur.
      Keep an eye on your [disk space usage](../file-system/file-storage.md/#quotas).
 
-!!! warning "Don't waste your compute resources."
-     Use interactive sessions to test your workflow.
-     Before a big batch job, run test jobs to make sure your code works.
+!!! note "Use compute resources responsibly"
+     Always run small test jobs to verify that your code, inputs, and resource
+    requests behave as expected. 
+    Refer to the [`job_estimate`](../running-jobs/batch-jobs.md/#estimating-resource-usage) command to estimate credit consumption from your job script before submission.
 
-!!! warning "Capture job output and error logs"
+!!! note "Always capture job output and error logs"
     To debug failed or unexpected jobs, it can be helpful to capture output and error streams
     separately. To do so, add these lines to the slurm job script:
     `#SBATCH --output=job_%j.out`
     `#SBATCH --error=job_%j.err`
     
-!!! warning "Using modules"
+!!! note "Load software using modules"
      Most software on Roar is managed through the software stack and loaded
      using modules. Please check [Modules](../software/modules.md)
 
