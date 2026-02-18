@@ -77,6 +77,8 @@ This commonly occurs with directories such as
 
  - `.local` - used by Python
  - `.comsol` - used by Comsol
+ - `.conda` - used by Anaconda
+ - `R` - used by R
 
 These [dot files](https://missing.csail.mit.edu/2019/dotfiles/) (and directories) 
 are hidden by default, but you can view them with `ls -la`.
@@ -111,7 +113,7 @@ you should pack the directory into a single file with `tar`
 (see [Packing files](managing-files.md#packing-files))
 before transferring.
 
-!!! warning "Do not use archive storage for sensitive data."
+!!! warning "Avoid using archive storage for sensitive data."
      If you need to archive data or software that must adhere to regulatory requirements
      please contact ICDS or the [Office of Information Security](https://security.psu.edu).
 
