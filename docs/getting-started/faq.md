@@ -18,6 +18,10 @@ Common reasons include:
 and all nodes that can fulfill your request (for memory, cores, GPUs, etc.) are currently 
 in use by other jobs. The only solution is to wait for resources to free up.
 
+!!! note "Check estimated job start times"
+    You can use `squeue -u <user_id> --start` to see when your pending jobs are
+    expected to begin (worst-case time), which helps estimate wait times and manage your workflow.
+
 - **(Priority):** Your job is waiting its turn behind other jobs that have a higher 
 priority. Your job's priority will increase over time, so the solution is to wait.
 
