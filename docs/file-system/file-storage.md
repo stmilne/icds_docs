@@ -64,6 +64,11 @@ lists directory sizes in order from large to small
 (the output of du is "piped" to [sort][sort]).
 [sort]: https://man7.org/linux/man-pages/man1/sort.1.html
 
+!!! note "Include hidden files when checking disk usage"
+    `du -sch .[!.]* * | sort -h` shows the size of all files and directories,
+    including hidden ones, and sorts them by size.
+    Useful when large hidden files may be contributing to quota issues.
+
 ## Quota issues in home
 
 Many user configuration files and packages are stored by default in `home`.
