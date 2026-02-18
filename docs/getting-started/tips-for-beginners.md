@@ -38,7 +38,7 @@ do more than use the Portal needs to learn.
 
 To learn more about Linux, we recommend the following resources:
 
- - [Unix tutorial]: (https://www.tutorialspoint.com/unix/unix_tutorial.pdf)
+ - [Unix tutorial](https://www.tutorialspoint.com/unix/unix_tutorial.pdf)
  - [Effective Computation in Physics - Chapter One](https://www.oreilly.com/library/view/effective-computation-in/9781491901564/?sso_link=yes&sso_link_from=pennsylvania-state-university)
  - [Introduction to Using the Shell in an HPC Context by HPC Carpentry](https://www.hpc-carpentry.org/hpc-shell/) which can be followed after [logging onto Roar](connecting.md/#two-ways-to-access) and [accessing the command line](../running-jobs/portal.md#command-line-access).
 
