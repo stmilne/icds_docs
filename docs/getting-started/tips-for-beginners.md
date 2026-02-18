@@ -4,7 +4,7 @@
      Submit nodes are for preparing files, submitting jobs, 
      examining results, and transferring files.
 
-!!! note "Don't store files on scratch."
+!!! note "Avoid storing important files in Scratch"
      [Scratch is not backed up](../file-system/file-storage.md/#quotas), 
      and files older than 30 days old are deleted.
 
