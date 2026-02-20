@@ -34,3 +34,48 @@
   word-wrap: break-word;
   word-break: break-word;
 }
+
+/* Custom Admonition Colors */
+
+.admonition.note,
+.admonition.tip,
+.admonition.important {
+  border-left-color: #1565c0;
+  background-color: #e3f2fd;
+}
+
+.admonition.note,
+.admonition.abstract {
+  border-left-color: #314D64;
+  background-color: #CCDAE6;
+}
+
+.admonition.info,
+.admonition.tip,
+.admonition.success,
+.admonition.question {
+  border-left-color: #3EA39E;
+  background-color: #CFECEB;
+}
+
+.admonition.warning {
+  border-left-color: #BF8226;
+  background-color: #F9EDDC;
+}
+
+.admonition.failure,
+.admonition.danger,
+.admonition.bug {
+  border-left-color: #BC204B;
+  background-color: #F2665E;
+}
+
+.admonition.example {
+  border-left-color: #491D70;
+  background-color: #AC8DCE;
+}
+
+.admonition.quote {
+  border-left-color: #A2AAAD;
+  background-color: #E4E5E7;
+}

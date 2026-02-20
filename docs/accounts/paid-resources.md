@@ -49,8 +49,8 @@ Prices for different compute nodes are set proportional to the cost of the hardw
 and at a level competitive with the cost of buying your own cluster.
 More expensive nodes cost more to use, reflecting their greater value.
 
-Current prices for credit accounts and allocations are [here][prices].
-[prices]: https://icds.psu.edu/services/roar/details-rates/
+If you're interested in purchasing credits or allocations, please view [current pricing and 
+details on our website][prices] or contact us with your requirements or questions at <icds@psu.edu>.
 
-If you're interested in purchasing credits or allocations, contact us with your 
-requirements or questions at <icds@psu.edu>.
+[Service Details and Rates][prices]{ .md-button }
+[prices]: https://icds.psu.edu/services/roar/details-rates/
