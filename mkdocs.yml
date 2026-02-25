@@ -59,6 +59,7 @@ nav:
         - software/custom-modules.md
         - software/installing-from-source.md
         - software/containers.md
+        - software/visual-studio-code.md
     - Packages: 
         - packages/python.md
         - packages/r-libraries.md
