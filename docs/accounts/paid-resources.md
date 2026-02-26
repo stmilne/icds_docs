@@ -55,11 +55,11 @@ details on our website][prices] or contact us with your requirements or question
 [Service Details and Rates][prices]{ .md-button }
 [prices]: https://icds.psu.edu/services/roar/details-rates/
 
-##Estimating Job Costs
+## Estimating Job Costs
 
 For credit accounts, it is helpful to estimate how many credits a batch job would use before you actually run it. 
 
-###Estimating Future Job Costs
+### Estimating Future Job Costs
 
 You can estimate its potential credit impact in two ways:
 
@@ -70,7 +70,7 @@ job_estimate <submit file>
 - [User Portal](https://portal.hpc.psu.edu/): If scheduling interactively, a dynamic estimate is displayed near the Launch button. This updates in real-time as you adjust your requested resources, partitions and duration of the job.
 
 
-###Estimating Past Job Costs
+### Estimating Past Job Costs
 
 To understand how many credits a past job (or a set of past jobs) would cost if run under current credit rates, use the `credit_estimate` tool. This is particularly useful for budgeting based on previous research cycles.
 
