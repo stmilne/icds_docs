@@ -97,8 +97,9 @@ are hidden by default, but you can view them with `ls -la`.
 To accurately assess your storage usage, ensure you account for dotfiles. These hidden files are often overlooked but can consume a significant amount of space.
 
 If you prefer a GUI, you can reveal hidden files as follows:
- - In the Files section, check the box for `Show Dotfiles`.
+
  - For Globus, In the file browser settings, select `Show Hidden Files`
+ - Using the Portal, under the Files section, check the box for `Show Dotfiles`.
 
 If you prefer using the [command line](../running-jobs/portal.md#command-line-access), use the command to list all files and directories including hidden ones, sorted by size:
 ```
