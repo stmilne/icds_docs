@@ -86,14 +86,7 @@ salloc -N 1 -n 4 -A <alloc> -C <feature> -t 1:00:00
 
 ## Optimizing usage
 
-For credit accounts, it is helpful to estimate how many credits a batch job would use before you actually run it. For this, use `job_estimate`:
-
-```bash
-job_estimate <submit file>
-```
-
-Additionally, for users who schedule jobs interactively through the portal, an estimate of the credits required for the job is displayed near the Launch button once you select your batch options and partition. This estimate updates dynamically based on your selections, allowing you to understand the approximate credit cost before starting the job.
-
+For credit-based accounts, start by using the [job_estimate](../accounts/paid-resources.md#estimating-future-job-costs) and [credit_estimate](../accounts/paid-resources.md#estimating-past-job-costs) tools to project your budget before and after execution. 
 
 ### Selecting nodes, cores, and memory
 
@@ -102,7 +95,7 @@ Choosing the right resources is critical for efficiency.
 *   **Nodes and Cores**: Most software is multi-threaded (runs on one computer, multiple cores). Set `--nodes=1` and `--ntasks` to the number of cores needed. Only request multiple nodes if your software uses MPI for distributed computing.
 *   **Memory**: Requesting too little memory causes failure; too much wastes resources. Start by estimating your data size and add a 20% buffer.
 
-#### Timing and efficiency
+### Timing and efficiency
 
 Test new workflows with short jobs before submitting long ones. You can time jobs using the `time` command or `date` commands in your script.
 
