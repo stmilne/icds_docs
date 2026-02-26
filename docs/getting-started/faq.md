@@ -19,7 +19,7 @@ and all nodes that can fulfill your request (for memory, cores, GPUs, etc.) are 
 in use by other jobs. The only solution is to wait for resources to free up.
 
 !!! note "Check estimated job start times"
-    You can use `squeue -u <user_id> --start` to see when your pending jobs are
+    You can use `squeue --me --start` to see when your pending jobs are
     expected to begin (worst-case time), which helps estimate wait times and manage your workflow.
 
 - **(Priority):** Your job is waiting its turn behind other jobs that have a higher 
@@ -94,8 +94,19 @@ This commonly occurs with directories such as
 These [dot files](https://missing.csail.mit.edu/2019/dotfiles/) (and directories) 
 are hidden by default, but you can view them with `ls -la`.
 
+To accurately assess your storage usage, ensure you account for dotfiles. These hidden files are often overlooked but can consume a significant amount of space.
+
+If you prefer a GUI, you can reveal hidden files as follows:
+ - In the Files section, check the box for `Show Dotfiles`.
+ - For Globus, In the file browser settings, select `Show Hidden Files`
+
+If you prefer using the terminal, use the command to list all files and directories including hidden ones, sorted by size:
+```
+du -sch .[!.]* * | sort -h
+```
+
 If the size of one of these directories becomes a problem, 
-it can be moved to `work`, and a [symbolic link] created 
+it can be moved to `work`, and a [symbolic link](https://www.lenovo.com/us/en/glossary/symbolic-link/) created 
 which points to the directory you moved to `work`.
 
 For example, the commands needed to move the `.local` directory 
@@ -109,7 +120,17 @@ mv ~/.local $WORK/.local
 ln -s $WORK/.local .local
 ```
 
-[symbolic link]:https://www.lenovo.com/us/en/glossary/symbolic-link/
+Another common source of large disk usage is the pip cache, which stores downloaded Python packages in `~/.cache/pip`. Over time, this cache can grow significantly and contribute to quota issues in home. 
+To inspect how much space the cache is using before clearing it, you can run the below command in $HOME:
+```
+du -sh ~/.cache/pip
+```
+
+The cache can be safely cleared without affecting installed packages by running:
+```
+pip cache purge
+```
+This removes all cached package files and may immediately free up a substantial amount of space.
 
 
 ## Job fails after hours or days. How can I help support reproduce the issue?
