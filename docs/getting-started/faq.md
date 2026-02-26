@@ -100,7 +100,7 @@ If you prefer a GUI, you can reveal hidden files as follows:
  - In the Files section, check the box for `Show Dotfiles`.
  - For Globus, In the file browser settings, select `Show Hidden Files`
 
-If you prefer using the terminal, use the command to list all files and directories including hidden ones, sorted by size:
+If you prefer using the [command line](../running-jobs/portal.md#command-line-access), use the command to list all files and directories including hidden ones, sorted by size:
 ```
 du -sch .[!.]* * | sort -h
 ```
