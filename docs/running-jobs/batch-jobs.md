@@ -204,3 +204,69 @@ To time a single command in a batch file, use [`time <command>`][time],
 which will write timing information to standard output.
 [time]: https://www.man7.org/linux/man-pages/man1/time.1.html
 
+
+## Cron jobs with scrontab
+
+For jobs that need to run on a recurring schedule,
+you can use `scrontab` to submit cron jobs to Slurm.
+`scrontab` is a Slurm utility that allows you to schedule batch jobs
+to run at specified times, similar to the Unix `crontab` command.
+
+### Using scrontab
+
+To create or edit a cron schedule, use:
+
+```
+scrontab -e
+```
+
+This opens an editor where you can specify when your batch jobs should run.
+The syntax is similar to standard Unix crontab with the addition of Slurm directives.
+
+To view your current scrontab schedule, use:
+
+```
+scrontab -l
+```
+
+To remove your scrontab schedule, use:
+
+```
+scrontab -r
+```
+
+### scrontab format
+
+Each line in your scrontab file represents one scheduled job and has the format:
+
+```
+<minute> <hour> <day_of_month> <month> <day_of_week> <slurm_directives> <batch_script>
+```
+
+For example, to submit a batch job every day at 2:30 AM:
+
+```
+30 2 * * * --account=account_id --partition=basic /path/to/myjob.sh
+```
+
+The time fields work the same as standard Unix crontab:
+
+- `<minute>`: 0-59
+- `<hour>`: 0-23
+- `<day_of_month>`: 1-31
+- `<month>`: 1-12
+- `<day_of_week>`: 0-6 (0 = Sunday)
+
+Use `*` to match any value, or specify ranges and lists as needed.
+
+### Example scrontab entry
+
+To run a Python script every Monday at 9:00 AM using your allocation:
+
+```
+0 9 * * 1 --account=my_account --partition=sla-prio --job-name=weekly-analysis /home/user/scripts/analysis.sh
+```
+
+For more information on scrontab, see the [Slurm scrontab documentation][scrontab].
+[scrontab]: https://slurm.schedmd.com/scrontab.html
+

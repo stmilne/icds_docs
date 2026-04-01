@@ -69,7 +69,7 @@ lists directory sizes in order from large to small
     including hidden ones, and sorts them by size.
     Useful when large hidden files may be contributing to quota issues.
 
-## Quota issues in home
+## Quota issues in $HOME
 
 Many user configuration files and packages are stored by default in `home`.
 If these become too large, they can exceed the quota and cause errors. 
@@ -78,28 +78,9 @@ This commonly occurs with directories such as
  - `.local` - used by Python
  - `.comsol` - used by Comsol
  - `.conda` - used by Anaconda
- - `R` - used by R
 
-These [dot files](https://missing.csail.mit.edu/2019/dotfiles/) (and directories) 
-are hidden by default, but you can view them with `ls -la`.
-
-If the size of one of these directories becomes a problem, 
-it can be moved to `work`, and a [symbolic link] created 
-which points to the directory you moved to `work`.
-
-For example, the commands needed to move the `.local` directory 
-would look like:
-
-```
-# first move the directory to /storage/work/
-mv ~/.local $WORK/.local
-
-# create a symlink in home pointing to the new location in work
-ln -s $WORK/.local .local
-```
-
-[symbolic link]:https://www.lenovo.com/us/en/glossary/symbolic-link/
-
+Please see [Quota issues in $HOME](../getting-started/faq.md#quota-issues-in-home) for more information 
+on how to handle these issues.
 
 ## Archive storage
 

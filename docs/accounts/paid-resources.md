@@ -49,8 +49,42 @@ Prices for different compute nodes are set proportional to the cost of the hardw
 and at a level competitive with the cost of buying your own cluster.
 More expensive nodes cost more to use, reflecting their greater value.
 
-Current prices for credit accounts and allocations are [here][prices].
+If you're interested in purchasing credits or allocations, please view [current pricing and 
+details on our website][prices] or contact us with your requirements or questions at <icds@psu.edu>.
+
+[Service Details and Rates][prices]{ .md-button }
 [prices]: https://icds.psu.edu/services/roar/details-rates/
 
-If you're interested in purchasing credits or allocations, contact us with your 
-requirements or questions at <icds@psu.edu>.
+## Estimating Job Costs
+
+For credit accounts, it is helpful to estimate how many credits a batch job would use before you actually run it. 
+
+### Estimating Future Job Costs
+
+You can estimate its potential credit impact in two ways:
+
+- [Command Line](../running-jobs/portal.md#command-line-access): Use `job_estimate` to analyze a specific submit file:
+```bash
+job_estimate <submit file>
+```
+- [User Portal](https://portal.hpc.psu.edu/): If scheduling interactively, a dynamic estimate is displayed near the Launch button. This updates in real-time as you adjust your requested resources, partitions and duration of the job.
+
+
+### Estimating Past Job Costs
+
+To understand how many credits a past job (or a set of past jobs) would cost if run under current credit rates, use the `credit_estimate` tool. This is particularly useful for budgeting based on previous research cycles.
+
+Provide a job ID or a file containing a list of job IDs (typically generated via sacct) to the estimator:
+
+```bash
+# Estimate a single specific job
+credit_estimate -j <jobID>
+
+# Estimate from a saved list of job IDs
+credit_estimate -l <job-list-file>
+
+# Direct pipe from sacct (no intermediate file)
+sacct -n -X -o jobid -u $USER -S 1/1 | credit_estimate
+```
+
+For more details on available options and instructions, refer to the command `credit_estimate -h`
