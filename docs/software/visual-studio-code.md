@@ -5,6 +5,7 @@ Visual Studio Code (VS Code) is a popular code editor that can be used to edit f
 ## Prerequisites
 
 Before you begin, ensure you have:
+
 1.  **Roar Collab Account**: An active account on Roar Collab.
 2.  **Visual Studio Code**: Installed on your local machine ([Download here](https://code.visualstudio.com/)).
 3.  **SSH Client**: An SSH client installed (Terminal on macOS/Linux, OpenSSH Client on Windows).
